@@ -14,7 +14,8 @@ class Plan extends Model
     protected $fillable = [
         'name',
         'short_description',
-        'price'
+        'price',
+        'cod'
     ];
 
     public function signatures(): HasMany

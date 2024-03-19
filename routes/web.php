@@ -1,8 +1,15 @@
 <?php
 
 use App\Enums\SignatureStatus;
+use App\Http\Controllers\EmployeeAddressController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\PlanController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SignatureController;
+use App\Http\Middleware\TokenMiddleware;
 use App\Models\Plan;
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
+use Illuminate\Http\Middleware\TrustProxies;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,8 +27,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/test', function ()  {
-    return view('test');
-});
+Route::resource('plano', PlanController::class)
+    ->withoutMiddleware([
+        TrustProxies::class,
+        VerifyCsrfToken::class,
+    ])->parameters([
+        'plano' => 'plan:cod',
+
+    ]);
+
+
 
 require __DIR__.'/auth.php';
