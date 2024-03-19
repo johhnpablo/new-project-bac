@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PlanRequest;
 use App\Models\Plan;
 use Illuminate\Http\Request;
 
@@ -20,15 +21,15 @@ class PlanController extends Controller
      */
     public function create()
     {
-        //
+        return view('plan');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(PlanRequest $request)
     {
-        return Plan::create($request->all());
+        return Plan::create($request->validated());
     }
 
     /**
