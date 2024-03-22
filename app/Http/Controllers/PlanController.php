@@ -14,7 +14,6 @@ class PlanController extends Controller
      */
     public function index()
     {
-        Cookie::queue(Cookie::forget('custom_cookie'));
         return Plan::all();
     }
 
@@ -23,7 +22,6 @@ class PlanController extends Controller
      */
     public function create()
     {
-        return Cookie::get('custom_cookie');
         return view('plan');
     }
 
