@@ -22,11 +22,4 @@ class Plan extends Model
     {
         return $this->hasMany(Signature::class);
     }
-
-    public function getName($value)
-    {
-        
-    }
-
-
 }
