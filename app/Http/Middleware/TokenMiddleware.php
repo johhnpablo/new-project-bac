@@ -15,7 +15,7 @@ class TokenMiddleware
      */
     public function handle(Request $request, Closure $next, $token): Response
     {
-        if ($request->header('token') !== $token){
+        if ($request->header('token') !== $token) {
             return response()->json(['error' => 'Invalid Token'], 401);
         }
 

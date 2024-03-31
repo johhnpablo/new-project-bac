@@ -8,15 +8,13 @@ use Illuminate\Routing\Controllers\Middleware;
 
 class EmployeeController extends Controller implements HasMiddleware
 {
-
-    public static function middleware (): array
+    public static function middleware(): array
     {
         return [
-            new Middleware ('checkToken:general-token', only: ['index']),
-            new Middleware ('checkToken:simple-token', only: ['create']),
+            new Middleware('checkToken:general-token', only: ['index']),
+            new Middleware('checkToken:simple-token', only: ['create']),
         ];
     }
-
 
     /**
      * Display a listing of the resource.

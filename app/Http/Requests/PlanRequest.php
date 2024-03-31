@@ -25,7 +25,7 @@ class PlanRequest extends FormRequest
             'name' => 'required',
             'short_description' => 'required',
             'price' => 'required|digits_between:1,6',
-            'cod' => 'required|max:8'
+            'cod' => 'required|max:8',
         ];
     }
 }

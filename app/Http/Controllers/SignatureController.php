@@ -10,8 +10,8 @@ class SignatureController extends Controller
 {
     public function index(Request $request)
     {
-        $validator = Validator::make( $request->all(),[
-           'drink' => 'required|string'
+        $validator = Validator::make($request->all(), [
+            'drink' => 'required|string',
         ]);
         $params = $validator->fails() ? $validator->messages() : $validator->validated()['drink'];
 

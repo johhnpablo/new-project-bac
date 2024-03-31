@@ -15,12 +15,11 @@ class Plan extends Model
         'name',
         'short_description',
         'price',
-        'cod'
+        'cod',
     ];
 
     public function signatures(): HasMany
     {
         return $this->hasMany(Signature::class);
     }
-
 }

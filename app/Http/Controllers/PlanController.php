@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PlanRequest;
 use App\Models\Plan;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cookie;
 
 class PlanController extends Controller
 {
