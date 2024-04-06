@@ -8,14 +8,14 @@
 </p>
 
 ## Projeto - Beer and Code 
-Esse projeto é para criar uma aplicação com o curso do Beer and code. E também compartilhar conhecimentos aprendidos no meio do caminho. 
+Esse projeto é para criar uma aplicação com o curso do Beer and code. E também compartilhar conhecimentos aprendidos no meio do caminho.   
 
-Este projeto foi criado para fins de aprendizado próprio e não tem como objetivo ser executado. Ele demonstra as minhas habilidades em:
+### Este projeto foi criado para fins de aprendizado próprio e não tem como objetivo ser executado. Ele demonstra as minhas habilidades em:  
 
-Configuração de um projeto Laravel
-Criação de Models
-Criação de Middlewares
-Criação de Sidebars
-Migrações de Banco de Dados
+- Configuração de um projeto Laravel
+- Criação de Models
+- Criação de Middlewares
+- Criação de Sidebars
+- Migrações de Banco de Dados  
 
 Todo conhecimento aprendido na primeira parte do curso fui aplicando em diversas partes da aplicação.
